@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: birdybigbirdpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: birdybigbirdpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: birdybigbirdpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: birdybigbirdpipelinesjavascriptdocker 
+          image: appregistry1904.azurecr.io/birdybigbirdpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
